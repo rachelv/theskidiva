@@ -14,18 +14,24 @@
         <div class="bg-sd-purple text-white">
             <div class="container max-w-screen-lg mx-auto py-6 px-6 lg:px-0">
 
-                <div class="flex justify-between">
-                    <div class="flex items-center space-x-6 md:space-x-10">
-                        <a href="https://theskidiva.com"><img src="https://theskidiva.com/img/logos/logo-transparent-800x200.png" class="w-48" alt="The Ski Diva"/></a>
-                        <a href="https://theskidiva.com/forums" class="font-bold text-2xl">Forum</a>
-                        <a href="https://theskidiva.com/blog" class="font-bold text-2xl">Blog</a>
+                <div class="space-y-6">
+                    <div class="flex justify-between">
+                        <div class="flex items-center space-x-6 md:space-x-10">
+                            <a href="https://theskidiva.com"><img src="https://theskidiva.com/img/logos/logo-transparent-800x200.png" class="w-48" alt="The Ski Diva"/></a>
+                            <a href="https://theskidiva.com/forums" class="hidden md:inline font-bold text-2xl">Forum</a>
+                            <a href="https://theskidiva.com/blog" class="hidden md:inline font-bold text-2xl">Blog</a>
+                        </div>
+
+                        <button class="flex items-center space-x-2 bg-sd-pink hover:bg-sd-pink-hover py-3 px-4 drop-shadow rounded-lg">
+                            <span class="fa-solid fa-users"></span>
+                            <span>Join Now</span>
+                        </button>
                     </div>
 
-                    <button class="flex items-center space-x-2 bg-sd-pink hover:bg-sd-pink-hover py-3 px-4 drop-shadow rounded-lg">
-                        <span class="fa-solid fa-users"></span>
-                        <span>Join Now</span>
-                    </button>
-
+                    <div class="flex justify-center space-x-6">
+                        <a href="https://theskidiva.com/forums" class="inline md:hidden font-bold text-2xl">Forum</a>
+                        <a href="https://theskidiva.com/blog" class="inline md:hidden font-bold text-2xl">Blog</a>
+                    </div>
                 </div>
 
             </div>
@@ -60,7 +66,15 @@
 
         <div class="bg-white">
             <div class="container max-w-screen-lg mx-auto py-10 px-4 lg:px-0">
-                <div class="space-y-8">
+                <div class="space-y-10">
+
+                    <div class="flex justify-center">
+                        <button class="flex items-center space-x-2 text-white bg-sd-pink hover:bg-sd-pink-hover py-3 px-4 drop-shadow rounded-lg">
+                            <span class="fa-solid fa-users"></span>
+                            <span>Join The Community</span>
+                        </button>
+                    </div>
+
                     <div class="space-y-4">
                         <div class="flex justify-between items-end">
                             <h2 class="text-sd-purple">Popular <span class="hidden sm:inline">Blog </span>Posts</h2>
@@ -69,6 +83,7 @@
                                 <span class="fa-solid fa-arrow-right"></span>
                             </a>
                         </div>
+
                         <div class="grid grid-cols-3 gap-6">
                             <div class="col-span-3 md:col-span-1">
                                 <a class="block space-y-2" href="https://www.theskidiva.com/new-site-ownership-at-the-ski-diva/">
@@ -93,12 +108,48 @@
                         </div>
                     </div>
 
-                    <div class="flex justify-between items-end">
-                        <h2 class="text-sd-purple">Active Discussions</h2>
-                        <a href="https://theskidiva.com/forums" class="block text-sd-purple font-bold flex items-center space-x-2">
-                            <span>Explore <span class="hidden sm:inline">the </span>forums</span>
-                            <span class="fa-solid fa-arrow-right"></span>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end">
+                            <h2 class="text-sd-purple">Active Discussions</h2>
+                            <a href="https://theskidiva.com/forums" class="block text-sd-purple font-bold flex items-center space-x-2">
+                                <span>Explore <span class="hidden sm:inline">the </span>forums</span>
+                                <span class="fa-solid fa-arrow-right"></span>
+                            </a>
+                        </div>
+
+
+                        <a class="flex items-center space-x-4" href="https://www.theskidiva.com/forums/index.php?forums/ski-tips.53/">
+                            <div class="fa-solid fa-comments text-sd-blue text-4xl"></div>
+                            <div>
+                                <h4 class="text-sd-blue">Ski Tips</h4>
+                                <p>Got a question about technique or a ski tip to share? Post it here.</p>
+                            </div>
                         </a>
+
+                        <a class="flex items-center space-x-4" href="https://www.theskidiva.com/forums/index.php?forums/ski-gear.11/">
+                            <div class="fa-solid fa-comments text-sd-blue text-4xl"></div>
+                            <div>
+                                <h4 class="text-sd-blue">Ski Gear</h4>
+                                <p>Questions and comments about all types of ski gear, gear recommendations, and more.</p>
+                            </div>
+                        </a>
+
+                        <a class="flex items-center space-x-4" href="https://www.theskidiva.com/forums/index.php?forums/ski-trip-reports.14/">
+                            <div class="fa-solid fa-comments text-sd-blue text-4xl"></div>
+                            <div>
+                                <h4 class="text-sd-blue">Ski Trip Reports</h4>
+                                <p>Have you taken an incredible ski trip recently? Tell us about it!</p>
+                            </div>
+                        </a>
+
+                        <a class="flex items-center space-x-4" href="https://www.theskidiva.com/forums/index.php?whats-new/posts/">
+                            <div class="fa-solid fa-newspaper text-sd-blue text-4xl"></div>
+                            <div>
+                                <h4 class="text-sd-blue">All Recent Posts</h4>
+                                <p>See every discussion thread that's been updated recently, regardless of category.</p>
+                            </div>
+                        </a>
+
                     </div>
 
                 </div>
