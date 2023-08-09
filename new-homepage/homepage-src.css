@@ -20,6 +20,14 @@ h4 {
     @apply font-bold;
 }
 
+.button-sd {
+    @apply bg-sd-pink;
+    @apply hover:bg-sd-pink-hover;
+    @apply p-3;
+    @apply drop-shadow-md;
+    @apply text-white;
+}
+
 .drop-shadow-headline {
     filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.7)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.7));
 }

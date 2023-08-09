@@ -13,31 +13,37 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     </head>
-    <body class="font-lato">
+    <body class="font-lato relative">
         <div class="bg-sd-purple text-white">
-            <div class="container max-w-screen-lg mx-auto py-6 px-6 lg:px-0">
+            <div class="container max-w-screen-lg mx-auto py-6 px-4 lg:px-0">
 
-                <div class="space-y-6">
-                    <div class="flex justify-between">
-                        <div class="flex items-center space-x-6 md:space-x-10">
-                            <a href="https://theskidiva.com"><img src="https://theskidiva.com/img/logos/logo-transparent-800x200.png" class="w-48" alt="The Ski Diva"/></a>
-                            <a href="https://theskidiva.com/forums" class="hidden md:inline font-bold text-2xl">Forum</a>
-                            <a href="https://theskidiva.com/blog" class="hidden md:inline font-bold text-2xl">Blog</a>
-                        </div>
-
-                        <button class="flex items-center space-x-2 bg-sd-pink hover:bg-sd-pink-hover py-3 px-4 drop-shadow-md rounded-lg">
-                            <span class="fa-solid fa-users"></span>
-                            <span>Join Now</span>
-                        </button>
+                <div class="flex justify-between">
+                    <div class="flex items-center space-x-6 md:space-x-10">
+                        <a href="#" id="hamburger-open" class="inline md:hidden"><span class="fa-solid fa-bars text-3xl"></span></a>
+                        <a href="#" id="hamburger-close" class="hidden"><span class="fa-solid fa-xmark text-3xl"></span></a>
+                        <a href="https://theskidiva.com"><img src="https://theskidiva.com/img/logos/logo-transparent-800x215.png" class="w-40 sm:w-48" alt="The Ski Diva"/></a>
+                        <a href="https://theskidiva.com/forums" class="hidden md:inline font-bold text-2xl">Forum</a>
+                        <a href="https://theskidiva.com/blog" class="hidden md:inline font-bold text-2xl">Blog</a>
                     </div>
 
-                    <div class="flex justify-center space-x-6">
-                        <a href="https://theskidiva.com/forums" class="inline md:hidden font-bold text-2xl">Forum</a>
-                        <a href="https://theskidiva.com/blog" class="inline md:hidden font-bold text-2xl">Blog</a>
-                    </div>
+                    <button class="flex items-center space-x-2 button-sd rounded-lg">
+                        <span class="fa-solid fa-users"></span>
+                        <span>Join Us</span>
+                    </button>
                 </div>
 
             </div>
+        </div>
+
+        <div id="hamburger-menu" class="absolute w-full hidden bg-sd-purple lg:px-0 text-white text-xl">
+            <a class="border-y border-blue-50 flex items-center space-x-2 p-4 hover:bg-sd-purple-hover" href="">
+                <span class="fa-solid fa-comments"></span>
+                <span>Forum</span>
+            </a>
+            <a class="border-b border-blue-50 flex items-center space-x-2 p-4 hover:bg-sd-purple-hover" href="">
+                <span class="fa-solid fa-newspaper"></span>
+                <span>Blog</span>
+            </a>
         </div>
 
         <div class="bg-cover bg-top" style="background-image: url(banner-1.jpg)">
@@ -49,7 +55,7 @@
                     <div class="w-full space-y-2">
                         <div class="flex w-full justify-center">
                             <input type="text" class="w-full md:w-2/3 lg:w-1/2 py-3 px-4 drop-shadow-search rounded-l-lg text-black" placeholder="powder skis, trip planning, skiing with kids, ski lessons...">
-                            <button class="flex items-center space-x-2 bg-sd-pink hover:bg-sd-pink-hover py-3 px-4 drop-shadow-search rounded-r-lg">
+                            <button class="flex items-center space-x-2 button-sd rounded-r-lg drop-shadow-search">
                                 <span class="fa-solid fa-magnifying-glass"></span>
                                 <span>Search</span>
                             </button>
@@ -76,7 +82,7 @@
                 <div class="space-y-10">
 
                     <div class="flex justify-center">
-                        <button class="flex items-center space-x-2 text-white bg-sd-pink hover:bg-sd-pink-hover py-3 px-4 drop-shadow-md rounded-lg">
+                        <button class="flex items-center space-x-2 button-sd rounded-lg">
                             <span class="fa-solid fa-users"></span>
                             <span>Join The Community</span>
                         </button>
@@ -160,7 +166,7 @@
                     </div>
 
                     <div class="flex justify-center">
-                        <button class="flex items-center space-x-2 text-white bg-sd-pink hover:bg-sd-pink-hover py-3 px-4 drop-shadow-md rounded-lg">
+                        <button class="flex items-center space-x-2 button-sd rounded-lg">
                             <span class="fa-solid fa-users"></span>
                             <span>Join The Community</span>
                         </button>
@@ -191,5 +197,39 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            const hamburgerOpenEl = document.getElementById('hamburger-open');
+            const hamburgerCloseEl = document.getElementById('hamburger-close');
+            const hamburgerMenuEl = document.getElementById('hamburger-menu');
+
+            hamburgerOpenEl.addEventListener('click', function (e) {
+                e.preventDefault();
+                hideTrigger(hamburgerOpenEl);
+                showTrigger(hamburgerCloseEl);
+
+                hamburgerMenuEl.classList.remove('hidden');
+                hamburgerMenuEl.classList.add('block');
+            }, false);
+
+            hamburgerCloseEl.addEventListener('click', function (e) {
+                e.preventDefault();
+                hideTrigger(hamburgerCloseEl);
+                showTrigger(hamburgerOpenEl);
+
+                hamburgerMenuEl.classList.remove('block');
+                hamburgerMenuEl.classList.add('hidden');
+            }, false);
+
+            function hideTrigger(el) {
+                el.classList.remove('inline');
+                el.classList.add('hidden');
+            }
+
+            function showTrigger(el) {
+                el.classList.remove('hidden');
+                el.classList.add('inline');
+            }
+        </script>
     </body>
 </html>

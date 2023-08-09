@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         'sd-purple': {
           DEFAULT: '#1e73be',
+          hover: '#1166B1',
         },
         'sd-blue': {
           DEFAULT: '#165389',
