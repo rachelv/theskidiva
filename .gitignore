@@ -1,9 +1,4 @@
-/node_modules
-/public/mix-manifest.json
-/public/hot
-/public/storage
-/public/css
-/public/js
+node_modules/
 /storage/*.key
 /vendor
 .vscode/
