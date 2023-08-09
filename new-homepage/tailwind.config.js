@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'lato': ['"Lato"', 'sans-serif']
+      },
       colors: {
         'sd-purple': {
           DEFAULT: '#1e73be',

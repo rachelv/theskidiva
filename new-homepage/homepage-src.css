@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 h1 {
-    @apply text-4xl;
-    @apply font-bold;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    @apply font-black;
 }
 h2 {
     @apply text-3xl;
@@ -17,4 +18,12 @@ h3 {
 h4 {
     @apply text-xl;
     @apply font-bold;
+}
+
+.drop-shadow-headline {
+    filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.7)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.7));
+}
+
+.drop-shadow-search {
+    filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.3)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.3));
 }
