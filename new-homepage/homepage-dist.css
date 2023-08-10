@@ -576,6 +576,10 @@ video {
   position: relative;
 }
 
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
 .col-span-3 {
   grid-column: span 3 / span 3;
 }
@@ -587,6 +591,10 @@ video {
 
 .block {
   display: block;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .inline {
@@ -621,6 +629,10 @@ video {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -643,6 +655,10 @@ video {
 
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -756,6 +772,11 @@ video {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .px-6 {
@@ -909,16 +930,20 @@ h4 {
 }
 
 .drop-shadow-headline {
-  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.7)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.7));
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.7)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.6));
 }
 
 .drop-shadow-search {
-  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.3)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.3));
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.3)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.2));
 }
 
 .hover\:bg-sd-purple-hover:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(17 102 177 / var(--tw-bg-opacity));
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
 }
 
 @media (min-width: 640px) {

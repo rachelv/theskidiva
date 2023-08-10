@@ -15,12 +15,14 @@
     </head>
     <body class="font-lato relative">
         <div class="bg-sd-purple text-white">
-            <div class="container max-w-screen-lg mx-auto py-6 px-4 lg:px-0">
+            <div class="container max-w-screen-lg mx-auto py-6 px-5 lg:px-0">
 
                 <div class="flex justify-between">
                     <div class="flex items-center space-x-6 md:space-x-10">
-                        <a href="#" id="hamburger-open" class="inline md:hidden"><span class="fa-solid fa-bars text-3xl"></span></a>
-                        <a href="#" id="hamburger-close" class="hidden"><span class="fa-solid fa-xmark text-3xl"></span></a>
+                        <div class="inline-block md:hidden">
+                            <a href="#" id="hamburger-open" class="inline"><span class="fa-solid fa-bars text-3xl"></span></a>
+                            <a href="#" id="hamburger-close" class="hidden"><span class="fa-solid fa-xmark text-3xl"></span></a>
+                        </div>
                         <a href="https://theskidiva.com"><img src="https://theskidiva.com/img/logos/logo-transparent-800x215.png" class="w-40 sm:w-48" alt="The Ski Diva"/></a>
                         <a href="https://theskidiva.com/forums" class="hidden md:inline font-bold text-2xl">Forum</a>
                         <a href="https://theskidiva.com/blog" class="hidden md:inline font-bold text-2xl">Blog</a>
@@ -28,7 +30,7 @@
 
                     <button class="flex items-center space-x-2 button-sd rounded-lg">
                         <span class="fa-solid fa-users"></span>
-                        <span>Join Us</span>
+                        <span>Join Now</span>
                     </button>
                 </div>
 
@@ -36,11 +38,13 @@
         </div>
 
         <div id="hamburger-menu" class="absolute w-full hidden bg-sd-purple lg:px-0 text-white text-xl">
-            <a class="border-y border-blue-50 flex items-center space-x-2 p-4 hover:bg-sd-purple-hover" href="">
+            <a class="border-y border-blue-50 flex items-center space-x-2 p-4 hover:bg-sd-purple-hover"
+                href="https://theskidiva.com/forums">
                 <span class="fa-solid fa-comments"></span>
                 <span>Forum</span>
             </a>
-            <a class="border-b border-blue-50 flex items-center space-x-2 p-4 hover:bg-sd-purple-hover" href="">
+            <a class="border-b border-blue-50 flex items-center space-x-2 p-4 hover:bg-sd-purple-hover"
+                href="https://theskidiva.com/blog">
                 <span class="fa-solid fa-newspaper"></span>
                 <span>Blog</span>
             </a>
@@ -71,14 +75,14 @@
         <div class="bg-blue-50">
             <div class="container max-w-screen-lg mx-auto py-10 px-8 lg:px-0">
                 <div class="text-slate-800 text-xl space-y-4">
-                    <p>Since 2006, The Ski Diva has been dedicated to provding a place where women can talk about all things skiing &mdash; and some things not &mdash; in a way that's comfortable, respectful, and inclusive.</p>
+                    <p>Since 2006, The Ski Diva has been dedicated to providing a place where women can talk about all things skiing &mdash; and some things not &mdash; in a way that's comfortable, respectful, and inclusive.</p>
                     <p>Whether you're just getting started or ski 100 days per season, our community of thousands of enthusiastic women skiers can help you find the information you need.</p>
                 </div>
             </div>
         </div>
 
         <div class="bg-white">
-            <div class="container max-w-screen-lg mx-auto py-10 px-4 lg:px-0">
+            <div class="container max-w-screen-lg mx-auto py-10 px-5 lg:px-0">
                 <div class="space-y-10">
 
                     <div class="flex justify-center">
@@ -123,9 +127,9 @@
 
                     <div class="space-y-6">
                         <div class="flex justify-between items-end">
-                            <h2 class="text-sd-purple">Active Discussions</h2>
+                            <h2 class="text-sd-purple"><span class="hidden sm:inline">Active </span> Discussions</h2>
                             <a href="https://theskidiva.com/forums" class="block text-sd-purple font-bold flex items-center space-x-2">
-                                <span>Explore <span class="hidden sm:inline">the </span>forums</span>
+                                <span>Explore the forums</span>
                                 <span class="fa-solid fa-arrow-right"></span>
                             </a>
                         </div>
@@ -178,10 +182,48 @@
 
         </div>
         <div class="bg-sd-blue text-blue-50">
-            <div class="container max-w-screen-lg mx-auto pt-8 pb-16 px-6 lg:px-0">
+            <div class="container max-w-screen-lg mx-auto pt-8 pb-16 px-5 lg:px-0">
                 <div class="space-y-8">
 
-                    <div>links & stuff</div>
+                    <div class="grid grid-cols-4 gap-8">
+
+                        <div class="col-span-2 md:col-span-1 space-y-2">
+                            <h4><a href="https://theskidiva.com/forums">Forum</a></h4>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/general-skiing.8/">General Skiing</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/ski-gear.11/">Ski Gear</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/gear-reviews.30/">Gear Reviews</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/backcountry-skiing.141/">Backcountry Skiing</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/ski-tips.53/">Ski Tips</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/family-skiing.10/">Family Skiing</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/resorts-conditions-travel.13/">Resorts, Conditions &amp; Travel</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/ski-trip-reports.14/">Ski Trip Reports</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/health-fitness-injuries-recovery.18/">Health, Fitness, Injuries &amp; Recovery</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/off-season-sports.19/">Off Season Sports</a>
+                        </div>
+
+                        <div class="col-span-2 md:col-span-1 space-y-2">
+                            <h4><a href="https://theskidiva.com/blog">Blog</a></h4>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/blog/">Recent Posts</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/category/ski-lessons/">Ski Lessons</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/category/interview/">Interviews</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/category/gear/">Ski Gear</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/category/resort-review/">Ski Resorts</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/category/womens-skiing/">Women's Skiing</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/category/environment/">Environment</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/category/health-fitness/">Health &amp; Fitness</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/category/general-skiing/">General Skiing</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/category/off-season/">Off Season</a>
+                        </div>
+
+                        <div class="col-span-2 md:col-span-1 space-y-2">
+                            <h4><a href="https://theskidiva.com">The Ski Diva</a></h4>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?help/terms/">Terms of Service</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?help/privacy-policy/">Privacy Policy</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?help/">Help</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/category/faq/">Frequently Asked Questions</a>
+                        </div>
+
+                    </div>
 
                     <div class="space-y-2">
                         <p class="font-bold">&copy; 2023 <a class="underline" href="https://winterfactory.com">Winter Factory, LLC</a>. All rights reserved.</p>
@@ -205,30 +247,21 @@
 
             hamburgerOpenEl.addEventListener('click', function (e) {
                 e.preventDefault();
-                hideTrigger(hamburgerOpenEl);
-                showTrigger(hamburgerCloseEl);
-
-                hamburgerMenuEl.classList.remove('hidden');
-                hamburgerMenuEl.classList.add('block');
+                toggleEl(hamburgerOpenEl, 'inline', 'hidden');
+                toggleEl(hamburgerCloseEl, 'hidden', 'inline');
+                toggleEl(hamburgerMenuEl, 'hidden', 'block');
             }, false);
 
             hamburgerCloseEl.addEventListener('click', function (e) {
                 e.preventDefault();
-                hideTrigger(hamburgerCloseEl);
-                showTrigger(hamburgerOpenEl);
-
-                hamburgerMenuEl.classList.remove('block');
-                hamburgerMenuEl.classList.add('hidden');
+                toggleEl(hamburgerCloseEl, 'inline', 'hidden');
+                toggleEl(hamburgerOpenEl, 'hidden', 'inline');
+                toggleEl(hamburgerMenuEl, 'block', 'hidden');
             }, false);
 
-            function hideTrigger(el) {
-                el.classList.remove('inline');
-                el.classList.add('hidden');
-            }
-
-            function showTrigger(el) {
-                el.classList.remove('hidden');
-                el.classList.add('inline');
+            function toggleEl(el, removeClass, addClass) {
+                el.classList.remove(removeClass);
+                el.classList.add(addClass);
             }
         </script>
     </body>
