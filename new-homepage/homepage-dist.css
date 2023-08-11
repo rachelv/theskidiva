@@ -568,6 +568,11 @@ video {
   }
 }
 
+.headline-mobile {
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+}
+
 .absolute {
   position: absolute;
 }
@@ -809,6 +814,21 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.py-44 {
+  padding-top: 11rem;
+  padding-bottom: 11rem;
+}
+
+.py-40 {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.py-36 {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
+
 .pb-16 {
   padding-bottom: 4rem;
 }
@@ -888,8 +908,6 @@ video {
 }
 
 h1 {
-  font-size: 2.5rem;
-  line-height: 3.5rem;
   font-weight: 900;
 }
 
@@ -931,10 +949,18 @@ h4 {
 
 .drop-shadow-headline {
   filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.7)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.6));
+  filter: drop-shadow(0 2px 2px rgb(0 0 0 / 0.7)) drop-shadow(0 0px 10px rgb(0 30 50 / 0.95));
 }
 
 .drop-shadow-search {
   filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.3)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.2));
+}
+
+@media (min-width: 1024px) {
+  .lg\:headline-desktop {
+    font-size: 3.25rem;
+    line-height: 4rem;
+  }
 }
 
 .hover\:bg-sd-purple-hover:hover {
