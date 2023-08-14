@@ -24,7 +24,7 @@
                             <a href="#" id="hamburger-close" class="hidden"><span class="fa-solid fa-xmark text-3xl"></span></a>
                         </div>
                         <a href="https://theskidiva.com"><img src="https://theskidiva.com/img/logos/logo-transparent-800x215.png" class="w-40 sm:w-48" alt="The Ski Diva"/></a>
-                        <a href="https://theskidiva.com/forums" class="hidden md:inline font-bold text-2xl">Forum</a>
+                        <a href="https://theskidiva.com/forums/index.php" class="hidden md:inline font-bold text-2xl">Forum</a>
                         <a href="https://theskidiva.com/blog" class="hidden md:inline font-bold text-2xl">Blog</a>
                     </div>
 
@@ -40,7 +40,7 @@
 
         <div id="hamburger-menu" class="absolute w-full hidden bg-sd-purple lg:px-0 text-white text-xl">
             <a class="border-y border-blue-50 flex items-center space-x-2 p-4 hover:bg-sd-purple-hover"
-                href="https://theskidiva.com/forums">
+                href="https://theskidiva.com/forums/index.php">
                 <span class="fa-solid fa-comments"></span>
                 <span>Forum</span>
             </a>
@@ -57,18 +57,18 @@
                 <div class="flex flex-col items-center space-y-10 py-40 text-white text-center">
 
                     <h1 class="drop-shadow-headline headline-mobile lg:headline-desktop">The Leading Online Community For Women Who Ski</h1>
-                    <!--
+
                     <div class="w-full space-y-2">
                         <div class="flex w-full justify-center">
-                            <input type="text" class="w-full md:w-2/3 lg:w-1/2 py-3 px-4 drop-shadow-search rounded-l-lg text-black" placeholder="powder skis, trip planning, skiing with kids, ski lessons...">
-                            <button class="flex items-center space-x-2 button-sd rounded-r-lg drop-shadow-search">
+                            <input type="text" id="search-input" class="w-full md:w-2/3 lg:w-1/2 py-3 px-4 drop-shadow-search rounded-l-lg text-black" placeholder="powder skis, trip planning, skiing with kids, ski lessons...">
+                            <a id="search-submit" class="flex items-center space-x-2 button-sd rounded-r-lg drop-shadow-search">
                                 <span class="fa-solid fa-magnifying-glass"></span>
                                 <span>Search</span>
-                            </button>
+                            </a>
                         </div>
                         <p class="drop-shadow-headline font-bold">Explore 17 years of forum discussions and blog posts on The Ski Diva</p>
                     </div>
-                    -->
+
                 </div>
 
             </div>
@@ -131,7 +131,7 @@
                     <div class="space-y-6">
                         <div class="flex justify-between items-end">
                             <h2 class="text-sd-purple"><span class="hidden sm:inline">Active </span> Discussions</h2>
-                            <a href="https://theskidiva.com/forums" class="block text-sd-purple font-bold flex items-center space-x-2">
+                            <a href="https://theskidiva.com/forums/index.php" class="block text-sd-purple font-bold flex items-center space-x-2">
                                 <span>Explore the forums</span>
                                 <span class="fa-solid fa-arrow-right"></span>
                             </a>
@@ -192,14 +192,14 @@
                     <div class="grid grid-cols-4 gap-8">
 
                         <div class="col-span-2 md:col-span-1 space-y-2">
-                            <h4><a href="https://theskidiva.com/forums">Forum</a></h4>
+                            <h4><a href="https://theskidiva.com/forums/index.php">Forum</a></h4>
                             <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/general-skiing.8/">General Skiing</a>
                             <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/ski-gear.11/">Ski Gear</a>
                             <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/gear-reviews.30/">Gear Reviews</a>
                             <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/backcountry-skiing.141/">Backcountry Skiing</a>
                             <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/ski-tips.53/">Ski Tips</a>
                             <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/family-skiing.10/">Family Skiing</a>
-                            <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/resorts-conditions-travel.13/">Resorts, Conditions &amp; Travel</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/general-resort-discussions.13/">General Resort Discussions</a>
                             <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/ski-trip-reports.14/">Ski Trip Reports</a>
                             <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/health-fitness-injuries-recovery.18/">Health, Fitness, Injuries &amp; Recovery</a>
                             <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/off-season-sports.19/">Off Season Sports</a>
@@ -225,6 +225,7 @@
                             <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?help/privacy-policy/">Privacy Policy</a>
                             <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?help/">Help</a>
                             <a class="block hover:underline" href="https://www.theskidiva.com/category/faq/">Frequently Asked Questions</a>
+                            <a class="block hover:underline" href="https://www.theskidiva.com/forums/index.php?forums/tutorials-faqs.145/">Tutorials</a>
                         </div>
 
                     </div>
@@ -266,6 +267,30 @@
             function toggleEl(el, removeClass, addClass) {
                 el.classList.remove(removeClass);
                 el.classList.add(addClass);
+            }
+
+            const searchInputEl = document.getElementById('search-input');
+            const searchSubmitEl = document.getElementById('search-submit');
+
+            searchInputEl.addEventListener('keyup', function (e) {
+                if (e.code === 'Enter') {
+                    e.preventDefault();
+                    console.log('enter');
+                    submitSearch();
+                }
+            }, false);
+
+            searchSubmitEl.addEventListener('click', function (e) {
+                e.preventDefault();
+                console.log('click');
+                submitSearch();
+            }, false);
+
+            function submitSearch() {
+                const q = searchInputEl.value;
+                if (q.length > 2) {
+                    document.location.href = 'https://www.google.com/search?q=' + encodeURI(q + ' site:theskidiva.com');
+                }
             }
         </script>
     </body>
